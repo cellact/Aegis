@@ -14,7 +14,7 @@ No phone number. No email. No name. No personal data required.
 
 Lead generation becomes “give us permission to communicate with you,” not “give us your personal data so we can contact you.”
 
-This repository is an index. The product lives in the three repositories below.
+This repository is an index. The product lives in the four repositories below.
 
 ## Repositories
 
@@ -23,6 +23,7 @@ This repository is an index. The product lives in the three repositories below.
 | [Elead](https://github.com/cellact/Elead) | Studio website. Example lead page (allot a line, show the QR) and the provider console (domain, identities, inbox). |
 | [elead-backend-gcp](https://github.com/cellact/elead-backend-gcp) | Cloud backend. Issues identities, serves QR payloads, verifies activation proofs, and routes a lead to the studio inbox. |
 | [Elead-HTML](https://github.com/cellact/Elead-HTML) | In-app UI loaded by Arnacon. End-user chat (`elead`) and service-provider inbox (`sp-elead`), plus install, chat, and calls. |
+| [swarm-gcp-vm](https://github.com/cellact/swarm-gcp-vm) | Swarm parts. Bee node on a GCE VM, plus startup and laptop-to-VM copy so the backend can reach Swarm. |
 
 ## How a lead flows
 
@@ -30,4 +31,4 @@ This repository is an index. The product lives in the three repositories below.
 2. **Backend (`elead-backend-gcp`)** — creates the identity and QR, later verifies the activation proof, and tells the lead app which inbox to write to.
 3. **In-app HTML (`Elead-HTML`)** — Arnacon opens the install page, then chat (and calls) on that identity. The lead never gives a name, phone, or email.
 
-Messaging and calls run through Arnacon. These three repos own the Elead product on top of it.
+Messaging and calls run through Arnacon. Swarm storage runs on `swarm-gcp-vm`. These repos own the Elead product on top of it.
